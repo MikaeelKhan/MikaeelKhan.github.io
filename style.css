@@ -1,4 +1,155 @@
+/* 1) Full-height & smooth-scroll */
 html {
+  scroll-behavior: smooth;
   height: 100%;
+  margin: 0;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: url('broof.avif') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* 2) Transparent header showing grid behind it, centered text */
+header {
+  background: rgba(0, 0, 0, 0.25);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header h1,
+header p {
+  color: #00E5FF;
+  text-shadow:
+    0 0 5px rgba(0,229,255,0.7),
+    0 0 15px rgba(0,229,255,0.5),
+    2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* 3) About section styling */
+section#about {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: left;
+}
+section#about h2 {
+  color: #00E5FF;
+  margin-top: 0;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;         /* center the form */
+}
+.contact-form label {
+  margin-top: 1rem;
+  color: #00E5FF;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #00E5FF;
+}
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #00E5FF;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #00c5e6;
+}
+
+
+/* 4) Centered main navigation */
+#main-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+#main-nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+#main-nav a {
+  color: #00E5FF;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* 5) Footer styling */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
   width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* left-align contact links */
+.footer-info {
+  align-self: flex-start;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.footer-info p {
+  margin: 0.5rem 0;
+}
+
+/* center the © and last-visited */
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom p {
+  margin: 0.25rem 0;
+}
+
+/* 6) Link color */
+a {
+  color: #00E5FF;
+}
+
+nav#toc ul {
+  list-style: none;  /* remove bullets */
+  margin: 0;         /* reset default margin */
+  padding: 0;        /* reset default padding */
+}
+
+nav#toc li {
+  /* if you want them inline: */
+  display: inline-block;
+  margin-right: 1rem;
 }
